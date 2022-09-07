@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { PhotosComponent } from './photo.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PhotosComponent } from './photos.component';
 
 describe('PhotosComponent', () => {
   let component: PhotosComponent;
@@ -8,7 +8,8 @@ describe('PhotosComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PhotosComponent ]
+      declarations: [ PhotosComponent ],
+      imports: [ HttpClientModule ],
     })
     .compileComponents();
   });
@@ -19,7 +20,7 @@ describe('PhotosComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should be created', () => {
     expect(component).toBeTruthy();
   });
 });
